@@ -4,4 +4,4 @@
 
 require 'prime'
 
-Prime.first(150_000).map{|n| n < 2_000_000 }.reduce
+Prime.first(150_000).map{|n| n if n < 2_000_000 }.compact.reduce(:+)
